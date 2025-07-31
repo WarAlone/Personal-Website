@@ -2,174 +2,128 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Richie Tehupuring</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richie Tehupuring — Personal Website</title>
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-    :root {
-      --primary: #2e7d32;
-      --background: #e8f5e9;
-      --text: #1b5e20;
-      --card: #ffffff;
-      --dark-bg: #1b1b1b;
-      --dark-text: #e0e0e0;
-    }
-
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--background);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .dark-mode {
-      background: var(--dark-bg);
-      color: var(--dark-text);
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     header {
-      background: var(--primary);
-      color: white;
-      padding: 2rem 1rem;
       text-align: center;
-      position: relative;
+      padding: 2rem 1rem;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      margin: 1rem 0 0.2rem;
+      font-size: 1.8rem;
     }
 
     header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+      color: #777;
+      margin: 0;
     }
 
-    #toggle-mode {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: white;
-      color: var(--primary);
-      border: none;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    #toggle-mode:hover {
-      background: #c8e6c9;
-    }
-
-    .container {
+    .section {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    .section {
-      margin-bottom: 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    .section:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    .section:nth-child(3) {
-      animation-delay: 0.4s;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--primary);
+    .section h2 {
+      border-bottom: 2px solid #0077cc;
       padding-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem 0.5rem 0 0;
-      padding: 0.6rem 1.2rem;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .buttons a:hover {
-      background: #1b5e20;
-      transform: scale(1.05);
+      color: #0077cc;
     }
 
     footer {
+      background-color: #222;
+      color: white;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ccc;
-      background-color: #f1f8e9;
+      padding: 1rem 0;
+      margin-top: 3rem;
     }
 
-    .dark-mode footer {
-      background-color: #2e2e2e;
-      color: #aaa;
-      border-color: #444;
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer i:hover {
+      color: #00acee;
     }
   </style>
 </head>
 <body>
-
-  <header>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <img src="richie.png" alt="Foto Richie Tehupuring" />
     <h1>Richie Tehupuring</h1>
-    <p>Telecommunication Engineer | IoT Enthusiast | Web Developer</p>
-    <button id="toggle-mode" title="Ganti Mode">🌙</button>
+    <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
   </header>
 
-  <div class="container">
-    <div class="section">
-      <h2>Tentang Saya</h2>
-      <p>Halo! Saya Richie. Saya sedang mendalami dunia pengembangan web dan Internet of Things (IoT). Saya suka mengeksplorasi teknologi baru, membuat proyek Arduino, serta membangun aplikasi sederhana.</p>
-    </div>
-
-    <div class="section">
-      <h2>Link Penting</h2>
-      <div class="buttons">
-        <a href="https://github.com/namagithubkamu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://drive.google.com/yourcv.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Kontak</h2>
-      <p>Email: <a href="mailto:richietehupuring@email.com">richietehupuring@email.com</a></p>
-    </div>
+  <!-- Tentang Saya -->
+  <div class="section" data-aos="fade-up">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang tertarik pada pengembangan sistem IoT dan aplikasi web. Saya aktif dalam berbagai proyek yang menggabungkan teknologi embedded dan cloud computing.</p>
   </div>
 
+  <!-- Portofolio -->
+  <div class="section" data-aos="zoom-in">
+    <h2>Portofolio</h2>
+    <p>Berikut beberapa proyek yang pernah saya kerjakan:</p>
+    <ul>
+      <li>Sistem Akuarium Otomatis dengan Arduino & Proteus</li>
+      <li>Monitoring IoT Berbasis Firebase dan ESP8266</li>
+      <li>Website Pemilu Internal Organisasi Kampus</li>
+    </ul>
+  </div>
+
+  <!-- Kontak -->
+  <div class="section" data-aos="fade-left">
+    <h2>Kontak</h2>
+    <p>Jika ingin bekerja sama atau berdiskusi seputar teknologi, silakan hubungi saya melalui email atau media sosial di bawah ini.</p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Richie Tehupuring — Semua hak dilindungi.
+    <p>&copy; 2025 Richie Tehupuring — All rights reserved.</p>
+    <div>
+      <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/waralone/personal-website" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+      <a href="mailto:richietehupuring@email.com"><i class="fas fa-envelope fa-lg"></i></a>
+    </div>
   </footer>
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    const toggle = document.getElementById("toggle-mode");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
-
 </body>
 </html>
