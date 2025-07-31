@@ -7,58 +7,77 @@
 
   <!-- AOS Animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <!-- Gaya Tema Oakwood Green -->
   <style>
+    :root {
+      --green: #4b8b3b;
+      --light-green: #dff0d8;
+      --brown: #6b4f3b;
+      --cream: #f8f5f0;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--cream);
       color: #333;
     }
 
     header {
+      background-color: var(--green);
+      color: white;
       text-align: center;
       padding: 2rem 1rem;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--light-green);
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     header h1 {
-      margin: 1rem 0 0.2rem;
-      font-size: 1.8rem;
+      margin: 1rem 0 0.5rem;
+      font-size: 2rem;
     }
 
     header p {
-      color: #777;
       margin: 0;
+      font-size: 1.1rem;
+      color: #e0f2dc;
     }
 
     .section {
-      max-width: 800px;
+      max-width: 850px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-left: 6px solid var(--green);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 6px;
     }
 
     .section h2 {
-      border-bottom: 2px solid #0077cc;
-      padding-bottom: 0.5rem;
-      color: #0077cc;
+      color: var(--brown);
+      margin-top: 0;
+      border-bottom: 2px solid var(--green);
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
     }
 
     footer {
-      background-color: #222;
+      background-color: var(--brown);
       color: white;
       text-align: center;
       padding: 1rem 0;
@@ -67,57 +86,67 @@
 
     footer a {
       color: white;
-      margin: 0 0.5rem;
+      margin: 0 0.6rem;
       text-decoration: none;
     }
 
-    footer i:hover {
-      color: #00acee;
+    footer a:hover {
+      color: var(--light-green);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .section {
+        margin: 1rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <!-- Header -->
+  <!-- HEADER -->
   <header data-aos="fade-down">
     <img src="richie.png" alt="Foto Richie Tehupuring" />
     <h1>Richie Tehupuring</h1>
     <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
   </header>
 
-  <!-- Tentang Saya -->
-  <div class="section" data-aos="fade-up">
+  <!-- TENTANG SAYA -->
+  <section class="section" data-aos="fade-up">
     <h2>Tentang Saya</h2>
-    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang tertarik pada pengembangan sistem IoT dan aplikasi web. Saya aktif dalam berbagai proyek yang menggabungkan teknologi embedded dan cloud computing.</p>
-  </div>
+    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang memiliki ketertarikan dalam bidang IoT dan pengembangan web. Saya menyukai tantangan baru dan aktif dalam mengerjakan proyek-proyek teknologi yang berdampak.</p>
+  </section>
 
-  <!-- Portofolio -->
-  <div class="section" data-aos="zoom-in">
+  <!-- PORTOFOLIO -->
+  <section class="section" data-aos="zoom-in">
     <h2>Portofolio</h2>
-    <p>Berikut beberapa proyek yang pernah saya kerjakan:</p>
     <ul>
-      <li>Sistem Akuarium Otomatis dengan Arduino & Proteus</li>
-      <li>Monitoring IoT Berbasis Firebase dan ESP8266</li>
-      <li>Website Pemilu Internal Organisasi Kampus</li>
+      <li>Monitoring Akuarium Otomatis menggunakan Arduino & Sensor</li>
+      <li>Sistem IoT berbasis Firebase dan ESP8266</li>
+      <li>Website Pemilu Organisasi Mahasiswa</li>
     </ul>
-  </div>
+  </section>
 
-  <!-- Kontak -->
-  <div class="section" data-aos="fade-left">
+  <!-- KONTAK -->
+  <section class="section" data-aos="fade-left">
     <h2>Kontak</h2>
-    <p>Jika ingin bekerja sama atau berdiskusi seputar teknologi, silakan hubungi saya melalui email atau media sosial di bawah ini.</p>
-  </div>
+    <p>Ingin bekerja sama, berdiskusi, atau sekadar bertukar ide? Silakan hubungi saya melalui email atau media sosial berikut.</p>
+  </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Richie Tehupuring — All rights reserved.</p>
+    <p>&copy; 2025 Richie Tehupuring</p>
     <div>
       <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-      <a href="https://github.com/waralone/personal-website" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://github.com/waralone" target="_blank"><i class="fab fa-github fa-lg"></i></a>
       <a href="mailto:richietehupuring@email.com"><i class="fas fa-envelope fa-lg"></i></a>
     </div>
   </footer>
 
-  <!-- AOS JS -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
