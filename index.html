@@ -4,19 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Richie Tehupuring</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    :root {
+      --primary: #2e7d32;
+      --background: #e8f5e9;
+      --text: #1b5e20;
+      --card: #ffffff;
+      --dark-bg: #1b1b1b;
+      --dark-text: #e0e0e0;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      background: var(--background);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background: var(--dark-bg);
+      color: var(--dark-text);
     }
 
     header {
-      background: #007acc;
+      background: var(--primary);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -29,6 +46,25 @@
       margin-top: 0.5rem;
     }
 
+    #toggle-mode {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #toggle-mode:hover {
+      background: #c8e6c9;
+    }
+
     .container {
       max-width: 800px;
       margin: 2rem auto;
@@ -37,27 +73,38 @@
 
     .section {
       margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .section:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .section:nth-child(3) {
+      animation-delay: 0.4s;
     }
 
     h2 {
-      border-bottom: 2px solid #007acc;
+      border-bottom: 2px solid var(--primary);
       padding-bottom: 0.5rem;
-      color: #007acc;
+      color: var(--primary);
     }
 
     .buttons a {
       display: inline-block;
       margin: 0.5rem 0.5rem 0 0;
-      padding: 0.5rem 1rem;
-      background: #007acc;
+      padding: 0.6rem 1.2rem;
+      background: var(--primary);
       color: white;
       text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .buttons a:hover {
-      background: #005f99;
+      background: #1b5e20;
+      transform: scale(1.05);
     }
 
     footer {
@@ -66,7 +113,20 @@
       font-size: 0.9rem;
       color: #666;
       border-top: 1px solid #ccc;
-      background-color: #fafafa;
+      background-color: #f1f8e9;
+    }
+
+    .dark-mode footer {
+      background-color: #2e2e2e;
+      color: #aaa;
+      border-color: #444;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -74,7 +134,8 @@
 
   <header>
     <h1>Richie Tehupuring</h1>
-    <p>Pembelajar Teknologi | IoT Enthusiast | Web Developer</p>
+    <p>Telecommunication Engineer | IoT Enthusiast | Web Developer</p>
+    <button id="toggle-mode" title="Ganti Mode">🌙</button>
   </header>
 
   <div class="container">
@@ -86,9 +147,9 @@
     <div class="section">
       <h2>Link Penting</h2>
       <div class="buttons">
-        <a href="https://github.com/namagithubkamu" target="_blank">GitHub</a>
-        <a href="https://instagram.com/akuninsta" target="_blank">Instagram</a>
-        <a href="https://drive.google.com/yourcv.pdf" target="_blank">CV</a>
+        <a href="https://github.com/namagithubkamu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://instagram.com/akuninsta" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://drive.google.com/yourcv.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
       </div>
     </div>
 
@@ -101,6 +162,14 @@
   <footer>
     &copy; 2025 Richie Tehupuring — Semua hak dilindungi.
   </footer>
+
+  <script>
+    const toggle = document.getElementById("toggle-mode");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
 
 </body>
 </html>
