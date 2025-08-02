@@ -2,156 +2,161 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richie Tehupuring — Personal Website</title>
-
-  <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Gaya Tema Oakwood Green -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WarAlone – Personal Web</title>
   <style>
     :root {
-      --green: #4b8b3b;
-      --light-green: #dff0d8;
-      --brown: #6b4f3b;
-      --cream: #f8f5f0;
+      --green-dark: #144d1a;
+      --green-soft: #6db26f;
+      --beige: #f0efe7;
+      --accent: #9be2b4;
     }
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--cream);
-      color: #333;
+      background-color: var(--beige);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: var(--green);
-      color: white;
+      background-color: var(--green-dark);
+      padding: 20px;
       text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      color: white;
+      position: relative;
     }
 
-    header img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid var(--light-green);
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    header h1 {
-      margin: 1rem 0 0.5rem;
+    .logo {
       font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #e0f2dc;
+    nav {
+      background: var(--green-soft);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    .section {
-      max-width: 850px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: white;
-      border-left: 6px solid var(--green);
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 6px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    .section h2 {
-      color: var(--brown);
-      margin-top: 0;
-      border-bottom: 2px solid var(--green);
-      padding-bottom: 0.3rem;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: var(--green-dark);
     }
 
     footer {
-      background-color: var(--brown);
-      color: white;
       text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
-    }
-
-    footer a {
+      padding: 15px;
+      background: var(--green-dark);
       color: white;
-      margin: 0 0.6rem;
-      text-decoration: none;
     }
 
-    footer a:hover {
-      color: var(--light-green);
+    /* Secret Easter Egg */
+    .secret-box {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: var(--green-dark);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 999;
+      font-size: 20px;
+      text-align: center;
+      transition: transform 0.4s ease;
+      white-space: pre-line;
+    }
+
+    .secret-box.show {
+      transform: translate(-50%, -50%) scale(1);
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .section {
-        margin: 1rem;
-        padding: 1rem;
+      main {
+        padding: 20px;
       }
     }
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header data-aos="fade-down">
-    <img src="richie.png" alt="Foto Richie Tehupuring" />
-    <h1>Richie Tehupuring</h1>
-    <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
+  <header>
+    <div class="logo">WarAlone</div>
   </header>
 
-  <!-- TENTANG SAYA -->
-  <section class="section" data-aos="fade-up">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang memiliki ketertarikan dalam bidang IoT dan pengembangan web. Saya menyukai tantangan baru dan aktif dalam mengerjakan proyek-proyek teknologi yang berdampak.</p>
-  </section>
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Proyek</a>
+    <a href="#">Kontak</a>
+  </nav>
 
-  <!-- PORTOFOLIO -->
-  <section class="section" data-aos="zoom-in">
-    <h2>Portofolio</h2>
+  <main>
+    <h1>Halo, saya WarAlone 👋</h1>
+    <p>Selamat datang di website pribadi saya. Saya suka belajar, ngoding, dan berbagi hal menarik. Di sini kamu bisa mengenal lebih dekat tentang saya, melihat beberapa proyek, dan membaca tulisan-tulisan saya.</p>
+
+    <h2>📂 Proyek Unggulan</h2>
     <ul>
-      <li>Monitoring Akuarium Otomatis menggunakan Arduino & Sensor</li>
-      <li>Sistem IoT berbasis Firebase dan ESP8266</li>
-      <li>Website Pemilu Organisasi Mahasiswa</li>
+      <li>💻 Sistem Monitoring Akuarium Pintar (Proteus + Arduino)</li>
+      <li>🌐 Website Real-Time dengan Flask & SocketIO</li>
+      <li>🔐 Simulasi Cybersecurity Tiket.com & Citilink</li>
     </ul>
-  </section>
 
-  <!-- KONTAK -->
-  <section class="section" data-aos="fade-left">
-    <h2>Kontak</h2>
-    <p>Ingin bekerja sama, berdiskusi, atau sekadar bertukar ide? Silakan hubungi saya melalui email atau media sosial berikut.</p>
-  </section>
+    <h2>💬 Kontak</h2>
+    <p>Email: waralone@email.com<br/>
+    Instagram: <a href="https://instagram.com/waralone" target="_blank">@waralone</a></p>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Richie Tehupuring</p>
-    <div>
-      <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-      <a href="https://github.com/waralone" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-      <a href="mailto:richietehupuring@email.com"><i class="fas fa-envelope fa-lg"></i></a>
-    </div>
+    © 2025 WarAlone. All rights reserved.
   </footer>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Script Easter Egg -->
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
+    let clickCount = 0;
+
+    const logo = document.querySelector(".logo");
+    const secretBox = document.createElement("div");
+    secretBox.classList.add("secret-box");
+    secretBox.innerText = "🎉 Kamu menemukan rahasianya!\n'Sehebat apapun kamu, tetap makan dulu.'";
+
+    document.body.appendChild(secretBox);
+
+    logo.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount === 7) {
+        secretBox.classList.add("show");
+        setTimeout(() => {
+          secretBox.classList.remove("show");
+          clickCount = 0;
+        }, 5000);
+      }
     });
   </script>
 </body>
