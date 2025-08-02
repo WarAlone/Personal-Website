@@ -4,44 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Richie Tehupuring</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="logo">Richie</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="about.html">Tentang</a></li>
-      <li><a href="contact.html">Kontak</a></li>
-    </ul>
-    <div class="burger">&#9776;</div>
-  </nav>
-
-  <header class="hero">
-    <img src="richie.png" alt="Foto Richie" class="profile-pic">
-    <h1>Richie Tehupuring</h1>
-    <p>Telecommunication Engineer | IoT Enthusiast | Web Developer</p>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Richie</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+      </nav>
+    </div>
+    <div class="header-content">
+      <img src="richie.png" alt="Richie Tehupuring" class="profile-pic">
+      <h2>Telecommunication Engineer | IoT Enthusiast | Web Developer</h2>
+      <p>Selamat datang di dunia digital saya!</p>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="main-content">
     <section>
-      <h2>Halo!</h2>
-      <p>Saya Richie. Saya mendalami dunia web development dan IoT. Suka bikin proyek Arduino dan eksplor teknologi baru.</p>
+      <h2>Proyek Terkini</h2>
+      <p>Saya tengah mengembangkan sistem akuarium otomatis berbasis Arduino dan Web, serta membangun situs interaktif real-time dengan Flask dan SocketIO.</p>
     </section>
-
     <section>
-      <h2>Link Penting</h2>
-      <div class="buttons">
-        <a href="https://github.com/namagithubkamu" target="_blank">GitHub</a>
-        <a href="https://instagram.com/akuninsta" target="_blank">Instagram</a>
-        <a href="https://drive.google.com/yourcv.pdf" target="_blank">CV</a>
-      </div>
+      <h2>Skill & Teknologi</h2>
+      <ul class="skills">
+        <li>Arduino, IoT</li>
+        <li>Proteus Simulation</li>
+        <li>Web Dev (HTML/CSS/JS, Flask)</li>
+        <li>Firebase, Modbus</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Richie Tehupuring — Semua hak dilindungi.
   </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
