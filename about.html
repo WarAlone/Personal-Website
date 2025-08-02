@@ -1,4 +1,42 @@
-<main class="container">
-  <h2>Tentang Saya</h2>
-  <p>Saya adalah seorang mahasiswa teknik telekomunikasi yang juga gemar membangun sistem otomatisasi berbasis IoT dan Arduino. Di waktu luang, saya membuat web, bermain dengan sensor, atau membuat simulasi di Proteus.</p>
-</main>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Richie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Richie</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section>
+      <h2>Tentang Saya</h2>
+      <p>Saya Richie Tehupuring, mahasiswa bidang telekomunikasi yang sangat tertarik pada Internet of Things, Arduino, dan pengembangan web. Saya terbiasa mengembangkan sistem automasi berbasis sensor, membuat simulasi di Proteus, serta menghubungkannya ke antarmuka berbasis web secara real-time. </p>
+      <p>Di waktu senggang, saya suka membangun sistem monitoring dan kontrol berbasis Firebase atau socket. Salah satu karya saya yang sedang dikembangkan adalah smart aquarium system.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Richie Tehupuring
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
