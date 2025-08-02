@@ -2,159 +2,55 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richie Tehupuring — Personal Website</title>
-
-  <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Gaya Tema Oakwood Green -->
-  <style>
-    :root {
-      --green: #4b8b3b;
-      --light-green: #dff0d8;
-      --brown: #6b4f3b;
-      --cream: #f8f5f0;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--cream);
-      color: #333;
-    }
-
-    header {
-      background-color: var(--green);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid var(--light-green);
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    header h1 {
-      margin: 1rem 0 0.5rem;
-      font-size: 2rem;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #e0f2dc;
-    }
-
-    .section {
-      max-width: 850px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: white;
-      border-left: 6px solid var(--green);
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 6px;
-    }
-
-    .section h2 {
-      color: var(--brown);
-      margin-top: 0;
-      border-bottom: 2px solid var(--green);
-      padding-bottom: 0.3rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    footer {
-      background-color: var(--brown);
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 0.6rem;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--light-green);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .section {
-        margin: 1rem;
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Richie Tehupuring</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header data-aos="fade-down">
-    <img src="richie.png" alt="Foto Richie Tehupuring" />
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Richie</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="#About">Tentang</a></li>
+      <li><a href="#Contact">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img src="richie.png" alt="Foto Richie" class="profile-img" />
     <h1>Richie Tehupuring</h1>
-    <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
+    <p>Mahasiswa Teknik Telekomunikasi - POLBAN</p>
   </header>
 
-  <!-- TENTANG SAYA -->
-  <section class="section" data-aos="fade-up">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang memiliki ketertarikan dalam bidang IoT dan pengembangan web. Saya menyukai tantangan baru dan aktif dalam mengerjakan proyek-proyek teknologi yang berdampak.</p>
-  </section>
+  <main>
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>Saya Richie Tehupuring, seorang mahasiswa yang aktif dalam pengembangan teknologi, jaringan, dan pemrograman. Memiliki ketertarikan khusus dalam dunia IoT, web development, dan sistem tertanam.</p>
+    </section>
 
-  <!-- PORTOFOLIO -->
-  <section class="section" data-aos="zoom-in">
-    <h2>Portofolio</h2>
-    <ul>
-      <li>Konfigurasi LoRa Gateway Korenix Jetwave 4110L</li>
-      <li>Sistem IoT berbasis Firebase dan ESP8266</li>
-      <li>Cybersecurity Enthusiasm</li>
-      <li>Telecommunication Expert</li>
-      
-    </ul>
-  </section>
+    <section>
+      <h2>Proyek</h2>
+      <ul>
+        <li>Sistem Pemberi Pakan Ikan Otomatis (Proteus + Arduino)</li>
+        <li>Simulasi Jaringan FTTH Menggunakan OptiSystem</li>
+        <li>Web Monitoring Sensor Real-Time dengan Flask & Firebase</li>
+      </ul>
+    </section>
 
-  <!-- KONTAK -->
-  <section class="section" data-aos="fade-left">
-    <h2>Kontak</h2>
-    <p>Ingin bekerja sama, berdiskusi, atau sekadar bertukar ide? Silakan hubungi saya melalui email atau media sosial berikut.</p>
-  </section>
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:richie.tehupuring@polban.ac.id">richie.tehupuring@polban.ac.id</a></p>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Richie Tehupuring</p>
-    <div>
-      <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-      <a href="https://github.com/waralone" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-      <a href="mailto:richietehupuring@email.com"><i class="fas fa-envelope fa-lg"></i></a>
-    </div>
+    <p>© 2025 Richie Tehupuring</p>
   </footer>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
 </body>
 </html>
