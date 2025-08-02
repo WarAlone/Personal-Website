@@ -1,162 +1,51 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WarAlone – Personal Web</title>
-  <style>
-    :root {
-      --green-dark: #144d1a;
-      --green-soft: #6db26f;
-      --beige: #f0efe7;
-      --accent: #9be2b4;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--beige);
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--green-dark);
-      padding: 20px;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    nav {
-      background: var(--green-soft);
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
-      color: var(--green-dark);
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: var(--green-dark);
-      color: white;
-    }
-
-    /* Secret Easter Egg */
-    .secret-box {
-      position: fixed;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      background: var(--green-dark);
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      z-index: 999;
-      font-size: 20px;
-      text-align: center;
-      transition: transform 0.4s ease;
-      white-space: pre-line;
-    }
-
-    .secret-box.show {
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 20px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Richie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <div class="logo">WarAlone</div>
+    <img src="richie.png" alt="Foto Richie Tehupuring" />
+    <h1><span id="typed-name"></span></h1>
+    <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
   </header>
 
-  <nav>
-    <a href="#">Beranda</a>
-    <a href="#">Tentang</a>
-    <a href="#">Proyek</a>
-    <a href="#">Kontak</a>
-  </nav>
-
   <main>
-    <h1>Halo, saya WarAlone 👋</h1>
-    <p>Selamat datang di website pribadi saya. Saya suka belajar, ngoding, dan berbagi hal menarik. Di sini kamu bisa mengenal lebih dekat tentang saya, melihat beberapa proyek, dan membaca tulisan-tulisan saya.</p>
+    <section>
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah mahasiswa yang berfokus pada bidang Telekomunikasi dengan ketertarikan mendalam pada Internet of Things, Web Development, dan Cybersecurity. Saat ini saya sedang mengembangkan berbagai proyek berbasis Arduino dan sistem monitoring berbasis web.
+      </p>
+    </section>
 
-    <h2>📂 Proyek Unggulan</h2>
-    <ul>
-      <li>💻 Sistem Monitoring Akuarium Pintar (Proteus + Arduino)</li>
-      <li>🌐 Website Real-Time dengan Flask & SocketIO</li>
-      <li>🔐 Simulasi Cybersecurity Tiket.com & Citilink</li>
-    </ul>
-
-    <h2>💬 Kontak</h2>
-    <p>Email: waralone@email.com<br/>
-    Instagram: <a href="https://instagram.com/waralone" target="_blank">@waralone</a></p>
+    <section>
+      <h2>Kontak</h2>
+      <ul>
+        <li>Email: <a href="mailto:richie.tehupuring@email.com">richie.tehupuring@email.com</a></li>
+        <li>GitHub: <a href="https://github.com/WarAlone" target="_blank">WarAlone</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    © 2025 WarAlone. All rights reserved.
+    <p>&copy; 2025 Richie Tehupuring</p>
   </footer>
 
-  <!-- Script Easter Egg -->
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    let clickCount = 0;
-
-    const logo = document.querySelector(".logo");
-    const secretBox = document.createElement("div");
-    secretBox.classList.add("secret-box");
-    secretBox.innerText = "🎉 Kamu menemukan rahasianya!\n'Sehebat apapun kamu, tetap makan dulu.'";
-
-    document.body.appendChild(secretBox);
-
-    logo.addEventListener("click", () => {
-      clickCount++;
-      if (clickCount === 7) {
-        secretBox.classList.add("show");
-        setTimeout(() => {
-          secretBox.classList.remove("show");
-          clickCount = 0;
-        }, 5000);
-      }
+    new Typed('#typed-name', {
+      strings: ["Richie Tehupuring"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      showCursor: false,
+      loop: false
     });
   </script>
 </body>
