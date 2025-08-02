@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Richie Tehupuring</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section>
+      <h2>Hubungi Saya</h2>
+      <p>Email: <a href="mailto:richietehupuring@email.com">richie@email.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/richietehupuring" target="_blank">@akuninsta</a></p>
+      <p>GitHub: <a href="https://github.com/waralone" target="_blank">namagithubkamu</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Richie Tehupuring
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
