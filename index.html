@@ -1,51 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil Richie</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+  <title>Richie Tehupuring — Personal Website</title>
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Gaya Tema Oakwood Green -->
+  <style>
+    :root {
+      --green: #4b8b3b;
+      --light-green: #dff0d8;
+      --brown: #6b4f3b;
+      --cream: #f8f5f0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--cream);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--light-green);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 1rem 0 0.5rem;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #e0f2dc;
+    }
+
+    .section {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: white;
+      border-left: 6px solid var(--green);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 6px;
+    }
+
+    .section h2 {
+      color: var(--brown);
+      margin-top: 0;
+      border-bottom: 2px solid var(--green);
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      background-color: var(--brown);
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 0.6rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--light-green);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .section {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
+  <!-- HEADER -->
+  <header data-aos="fade-down">
     <img src="richie.png" alt="Foto Richie Tehupuring" />
-    <h1><span id="typed-name"></span></h1>
+    <h1>Richie Tehupuring</h1>
     <p>Mahasiswa Teknik Telekomunikasi | IoT & Web Dev Enthusiast</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Tentang Saya</h2>
-      <p>
-        Saya adalah mahasiswa yang berfokus pada bidang Telekomunikasi dengan ketertarikan mendalam pada Internet of Things, Web Development, dan Cybersecurity. Saat ini saya sedang mengembangkan berbagai proyek berbasis Arduino dan sistem monitoring berbasis web.
-      </p>
-    </section>
+  <!-- TENTANG SAYA -->
+  <section class="section" data-aos="fade-up">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa Teknik Telekomunikasi yang memiliki ketertarikan dalam bidang IoT dan pengembangan web. Saya menyukai tantangan baru dan aktif dalam mengerjakan proyek-proyek teknologi yang berdampak.</p>
+  </section>
 
-    <section>
-      <h2>Kontak</h2>
-      <ul>
-        <li>Email: <a href="mailto:richie.tehupuring@email.com">richie.tehupuring@email.com</a></li>
-        <li>GitHub: <a href="https://github.com/WarAlone" target="_blank">WarAlone</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- PORTOFOLIO -->
+  <section class="section" data-aos="zoom-in">
+    <h2>Portofolio</h2>
+    <ul>
+      <li>Monitoring Akuarium Otomatis menggunakan Arduino & Sensor</li>
+      <li>Sistem IoT berbasis Firebase dan ESP8266</li>
+      <li>Website Pemilu Organisasi Mahasiswa</li>
+    </ul>
+  </section>
 
+  <!-- KONTAK -->
+  <section class="section" data-aos="fade-left">
+    <h2>Kontak</h2>
+    <p>Ingin bekerja sama, berdiskusi, atau sekadar bertukar ide? Silakan hubungi saya melalui email atau media sosial berikut.</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Richie Tehupuring</p>
+    <div>
+      <a href="https://instagram.com/richietehupuring" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/waralone" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+      <a href="mailto:richietehupuring@email.com"><i class="fas fa-envelope fa-lg"></i></a>
+    </div>
   </footer>
 
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    new Typed('#typed-name', {
-      strings: ["Richie Tehupuring"],
-      typeSpeed: 100,
-      backSpeed: 50,
-      showCursor: false,
-      loop: false
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
