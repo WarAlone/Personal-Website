@@ -5,52 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Richie Tehupuring</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
+  <nav>
     <div class="logo">Richie</div>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <ul class="menu">
+    <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="#About">Tentang</a></li>
-      <li><a href="#Contact">Kontak</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="contact.html">Kontak</a></li>
     </ul>
+    <div class="burger">&#9776;</div>
   </nav>
 
-  <header>
-    <img src="richie.png" alt="Foto Richie" class="profile-img" />
+  <header class="hero">
+    <img src="richie.png" alt="Foto Richie" class="profile-pic">
     <h1>Richie Tehupuring</h1>
-    <p>Mahasiswa Teknik Telekomunikasi - POLBAN</p>
+    <p>Telecommunication Engineer | IoT Enthusiast | Web Developer</p>
   </header>
 
-  <main>
-    <section id="tentang">
-      <h2>Tentang Saya</h2>
-      <p>Saya Richie Tehupuring, seorang mahasiswa yang aktif dalam pengembangan teknologi, jaringan, dan pemrograman. Memiliki ketertarikan khusus dalam dunia IoT, web development, dan sistem tertanam.</p>
+  <main class="container">
+    <section>
+      <h2>Halo!</h2>
+      <p>Saya Richie. Saya mendalami dunia web development dan IoT. Suka bikin proyek Arduino dan eksplor teknologi baru.</p>
     </section>
 
     <section>
-      <h2>Proyek</h2>
-      <ul>
-        <li>Sistem Pemberi Pakan Ikan Otomatis (Proteus + Arduino)</li>
-        <li>Simulasi Jaringan FTTH Menggunakan OptiSystem</li>
-        <li>Web Monitoring Sensor Real-Time dengan Flask & Firebase</li>
-      </ul>
-    </section>
-
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <p>Email: <a href="mailto:richie.tehupuring@polban.ac.id">richie.tehupuring@polban.ac.id</a></p>
+      <h2>Link Penting</h2>
+      <div class="buttons">
+        <a href="https://github.com/namagithubkamu" target="_blank">GitHub</a>
+        <a href="https://instagram.com/akuninsta" target="_blank">Instagram</a>
+        <a href="https://drive.google.com/yourcv.pdf" target="_blank">CV</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Richie Tehupuring</p>
+    &copy; 2025 Richie Tehupuring — Semua hak dilindungi.
   </footer>
-
 </body>
 </html>
